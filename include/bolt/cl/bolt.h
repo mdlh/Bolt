@@ -35,7 +35,7 @@
 #include <string>
 #include <map>
 #include <boost/thread/mutex.hpp>
-#include "bolt/BoltVersion.h"
+#include "bolt/boltVersion.h"
 #include "bolt/cl/control.h"
 #include "bolt/cl/clcode.h"
 
