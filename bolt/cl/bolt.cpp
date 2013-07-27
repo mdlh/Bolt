@@ -19,8 +19,10 @@
 #include <iostream>
 #include <fstream>
 #include <streambuf>
+#ifdef _WIN32
 #include <direct.h>  //windows CWD for error message
 #include <tchar.h>
+#endif
 #include <algorithm>
 #include <vector>
 #include <set>
