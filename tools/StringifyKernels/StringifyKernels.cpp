@@ -66,8 +66,8 @@ void writeHeaderFile( const std::string& inputFileName, const std::string& destD
     std::cout << "Output path: " << headerPath << std::endl;
 
     //Open the Kernel file
-    std::ifstream f_kernel( inputFileName, std::fstream::in );
-    std::ofstream f_dest( headerPath, std::fstream::out );
+    std::ifstream f_kernel( inputFileName.c_str(), std::fstream::in );
+    std::ofstream f_dest( headerPath.c_str(), std::fstream::out );
 
     //    std::string fileContent( (std::istreambuf_iterator<char>( f_kernel ) ), std::istreambuf_iterator<char>( ) );
 
