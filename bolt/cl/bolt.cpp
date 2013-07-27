@@ -326,7 +326,7 @@ namespace bolt {
 
     std::string fileToString(const std::string &fileName)
     {
-        std::ifstream infile (fileName);
+        std::ifstream infile (fileName.c_str());
         if (infile.fail() ) {
 #if defined( _WIN32 )
             TCHAR osPath[ MAX_PATH ];
