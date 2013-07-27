@@ -423,7 +423,7 @@ namespace bolt {
      * Compile Kernel from primitive information
      *************************************************************************/
     void printKernels(
-        const ::std::vector<::std::string>& kernelNames,
+        const ::std::vector< ::std::string>& kernelNames,
         const ::std::string& completeKernelString,
         const ::std::string& compileOptions)
     {
@@ -450,7 +450,7 @@ namespace bolt {
     * - takes into account control
     * - requests program/kernel from ProgramMap
     **************************************************************************/
-    ::std::vector<::cl::Kernel> getKernels(
+    ::std::vector< ::cl::Kernel> getKernels(
         const control&      ctl,
         const std::vector<std::string>& typeNames,
         const KernelTemplateSpecializer * const kts,
@@ -520,7 +520,7 @@ namespace bolt {
 
         // retrieve kernels from program
         //std::cout << "Getting " << kts->numKernels() << " from program." << std::endl;
-        ::std::vector<::cl::Kernel> kernels;
+        ::std::vector< ::cl::Kernel> kernels;
         for (unsigned int i = 0; i < kts->numKernels() ; i++)
         {
             ::std::string name = kts->name(i);
@@ -604,7 +604,7 @@ namespace bolt {
         if (err != NULL) *err = l_err;
         try
         {
-            std::vector<::cl::Device> devices;
+            std::vector< ::cl::Device> devices;
             devices.push_back(device);
             l_err = program.build(devices, options.c_str());
             V_OPENCL( l_err, "Program::build() failed" );
